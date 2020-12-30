@@ -21,6 +21,14 @@ on:
   #watch:
   #  types: [started]
 
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+        
 jobs:
   build:
     runs-on: ubuntu-latest
